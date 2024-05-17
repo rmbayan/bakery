@@ -1,0 +1,97 @@
+.cdtitle{
+    text-align: center;
+    align-items: center;
+    padding: 10px; 
+}
+
+.type{
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.type1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.col-lg-8{
+    background-color: lightpink;
+}
+
+.card-text{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 5px; 
+}
+
+.form{
+    text-align: center;
+}
+
+.input{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+.imghead{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.inputType{
+  display: inline-block;
+  border: 1px solid #FFE5EC;
+  border-radius: 25px;
+  padding: 10px ;
+}
+
+.buttoninput{
+    border-radius: 25px;
+    padding: 10px;
+    border-style: none;
+    padding-bottom: 10px;
+}
+
+
+#header{
+    text-align: center;
+}
+
+.full{
+    background-color: #FFC2D1;
+}
+
+.navbar{
+    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.right{
+    text-align: end;
+    top: 1950px;
+    
+}
+.para{
+    padding-top: 10px;
+}
+
+.style{
+    text-decoration: none;
+}

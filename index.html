@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Homepage</title>
+
+        <!--Bootstrap & CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+
+        <!--Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!--Font Style-->
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lato&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--Start of Container-->
+        <div class="container-fluid">
+            <!--Start of First Row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--Start of Navbar-->
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html">Bakery</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="cupcakes.html">Cupcakes</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="cookies.html">Cookies</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="cakes.html">Cakes</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="aboutus.html">About Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <!--End of Navbar-->
+                </div>
+            </div>
+            <!--End of First Row-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="imghead" src="media/header.jpg" alt="cupcake line">
+                </div>
+            </div>
+
+            <!--Start of Carousel Row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h1 class="cdtitle">NEW flavor of the month!</h1>
+                                        <h2 class="type">Cookie dough cupcake</h2>
+                                        <h3 class="type1">Our new cookie dough cupcake is a vanilla cake with cookie dough flavor icing and bits of cookie dough on top. This is a special edition month flavor that won't be here for long!</h3>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img class="images" src="media/cdcupcake.jpg" alt="cookiedough cupcake" width="430" height="500">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h1 class="cdtitle">Birthday box</h1>
+                                        <h3 class="type1">Get someone you know a birthday box! You can get a variety of options like 4 cupcakes or a cake along with a handwritten letter and candles!</h3>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img class="images" src="media/box.webp" alt="birthday cupcakes" width="430" height="500">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h1 class="cdtitle">Join the rewards program!</h1>
+                                        <h2 class="type">Get 15% your first purchase when you are signed up for the news letter.</h2                                        <form>
+                                        <form class="form">
+                                          <label class="input" for="name">Name:</label><br>
+                                          <input class="inputType" type="text" id="name" name="name" placeholder="Your name:"><br>
+                                          <label class="input" for="email">Email:</label><br>
+                                          <input class="inputType" type="text" id="email" name="email" placeholder="Your email:"><br><br><br>  
+                                          
+                                          
+                                          <input class="buttoninput" type="submit" value="Click here to redeem your 15% off!">
+                                        </form>    
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img class="images" src="media/email.webp" alt="email" width="430" height="500">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--End of Carousel Row-->
+
+            <!--Start of Cards Row-->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card"><!--CARD ONE-->
+                    <img class="card-img-top" src="media/cake.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cakes</h5>
+                            <p class="card-text">Our speciality cakes are moist and delicious, try them out! Click the button below to be redirected to the cakes page.</p>
+                            <a href="cakes.html" class="btn btn-gray">Head over to CAKES!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card"><!--CARD TWO-->
+                        <img class="card-img-top" src="media/cupcakes.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cupcakes</h5>
+                            <p class="card-text">Our cupcakes are a mini version of our cakes. With many flavors to choose from! Click the button below to be redirected to the cupcakes page.</p>
+                            <a href="cupcakes.html" class="btn btn-gray">Head over to CUPCAKES!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card"><!--CARD THREE-->
+                        <img class="card-img-top" src="media/cookies.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Cookies</h5>
+                            <p class="card-text">Our cookies have a nice crust on the outside and a gooey center that could be filled with a surprise! Click the button below to be redirected to the cookies page.</p>
+                            <a href="cookies.html" class="btn btn-gray">Head over to COOKIES!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Cards Row-->
+
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="media/yellowCake.jpg" alt="Yellow Cake" width="300" height="300">
+                </div>
+                <div class="col-lg-3">
+                    <img src="media/Chococupcakes.jpg" alt="Chocolate vanilla cupcakes" width="300" height="300">
+                </div>
+                <div class="col-lg-3">
+                    <img src="media/lemonCookies.jpg" alt="lemon cookies" width="300" height="300">
+                </div>
+                <div class="col-lg-3">
+                    <img src="media/sugar.jpg" alt="suagr cookies" width="300" height="300">
+                </div>
+            </div>
+
+            <!--Start of Footer-->
+            <div class="row full">
+                <div class="col-lg-6">
+                    <h3 class="navbar">Sign up for emails.</h3>
+                    <forms>
+                        <input class="inputType" type="text" id="email" name="email" placeholder="Your email">
+                        <input class="buttoninput" type="submit" value="Sign up">
+                    </forms>
+                </div>
+                <div class="col-lg-6 right">
+                    <h3 class="para">Have to contact us?</h3>
+                    <button type="button" class="btn btn-light buttoninput style">
+                        <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.
+                    </button>
+                </div>
+            </div>
+            <!--End of Footer-->
+        </div>
+        <!--End of Container-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
