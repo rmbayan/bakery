@@ -14,65 +14,563 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!--Font Style-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lato&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="josefin-sans">
         <!--Start of Container-->
         <div class="container-fluid">
             <!--Start of First Row-->
             <div class="row">
                 <div class="col-lg-12">
                     <!--Start of Navbar-->
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">Bakery</a>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="media/SDLogo.png" alt="Bootstrap" width="50" height="50">
+                            </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cupcakes.html">Cupcakes</a>
+                                        <a class="nav-link one" href="cupcakes.html">Cupcakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cookies.html">Cookies</a>
+                                        <a class="nav-link two" href="cookies.html">Cookies</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="cakes.html">Cakes</a>
+                                        <a class="nav-link three active" href="cakes.html">Cakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="aboutus.html">About Us</a>
+                                        <a class="nav-link four" href="aboutus.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link five" href="faq.html">FAQ</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        <!--BAG ICON-->
+                        <a class="icon-link icon-link-hover bagg" href="cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                            </svg>
+                            <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                        </a>  
                     </nav>
                     <!--End of Navbar-->
                 </div>
             </div>
             <!--End of First Row-->
-            <p>Cakes</p>
+        
+            <br>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 id="header">Cakes</h1>
+                </div>
+            </div>
+
+            <br>
+
+            <!--Start of Header Row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="imghead" src="media/header.jpg" alt="cupcake line">
+                </div>
+            </div>
+            <!--End of Header Row-->
+
+            <br>
+
+            <!--Start of Cake Section-->
+            <div class="row">
+                <div class="col-lg-2">
+                  <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-1">Top 3 Best Cakes</a>
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-2">Monthly Cakes</a>
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-3">Limited Time Cakes</a>
+                  </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <div style="overflow-y: scroll; overflow-x:hidden; height:600px;" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        
+                        <!--Start of First Section - Top Three-->
+                        <h4 id="list-item-1" class="cupcakeheader">Top 3 Best Cakes</h4>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/cakelemon.jpg" class="card-img-top" alt="lemon cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lemon</h5>
+                                        <p class="card-text">Sweet moist cake with lemon buttercream and lemon curd filling.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.25</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Lemon Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            baking powder,
+                                                            salt,
+                                                            butter,
+                                                            vegetable oil,
+                                                            granulated sugar,
+                                                            eggs,
+                                                            vanilla extract,
+                                                            lemon,
+                                                            milk
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW!</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/redvelvet.jpg" class="card-img-top" alt="red velvet">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Red Velvet</h5>
+                                        <p class="card-text">Moist red velvet cake with a creamy cream cheese frosting.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.25</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Red Velvet Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            all purpose flour
+                                                            granulated sugar,
+                                                            baking soda,
+                                                            cocoa powder,
+                                                            salt,
+                                                            vegetable oil,
+                                                            eggs,
+                                                            buttermilk,
+                                                            vanilla extract,
+                                                            white vinegar,
+                                                            red gel food coloring
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/cookcream.jpg" class="card-img-top" alt="cookies and cream">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cookies and Cream</h5>
+                                        <p class="card-text">Soft oreo flavored cake with a light buttercream with crunchy oreo bits.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.65</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake3Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake3Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Cookies and Cream Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            granulated sugar,
+                                                            cocoa powder,
+                                                            baking soda,
+                                                            baking powder,
+                                                            salt,
+                                                            eggs,
+                                                            buttermilk,
+                                                            vegetable oil,
+                                                            vanilla extract,
+                                                            boiling water,
+                                                            espresso powder
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of First Section - Top Three-->
+
+                        <br>
+
+                        <!--Start of Second Section - Monthly-->
+                        <h4 id="list-item-2" class="cupcakeheader">Monthly Cakes</h4>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/chococake.jpg" class="card-img-top" alt="chocolate cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chocolate</h5>
+                                        <p class="card-text">Rich chocolate flavored cake.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.50</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Chocolate Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            granulated sugar,
+                                                            cocoa powder,
+                                                            baking soda,
+                                                            baking powder,
+                                                            salt,
+                                                            buttermilk,
+                                                            vegetable oil,
+                                                            vanilla extract,
+                                                            boiling water,
+                                                            espresso powder
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/chocolatemocha.jpg" class="card-img-top" alt="choclate mocha cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chocolate Mocha</h5>
+                                        <p class="card-text">Moist chocolate mocha cake with buttercream frosting and espresso powder.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.65</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+            
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Chocolate Mocha Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            granulated sugar,
+                                                            dark cocoa powder,
+                                                            baking soda,
+                                                            baking powder,
+                                                            salt,
+                                                            buttermilk,
+                                                            large eggs,
+                                                            vegetable oil,
+                                                            vanilla extract,
+                                                            boiling water,
+                                                            instant espresso powder
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/cranberryorange.jpg" class="card-img-top" alt="cranberry orange cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cranberry Orange</h5>
+                                        <p class="card-text">This tender orange cake has fresh cranberries and orange cream cheese frosting.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.50</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake3Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake3Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Cranberry Orange Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            baking powder,
+                                                            salt,
+                                                            unsalted butter,
+                                                            vegetable oil,
+                                                            granulated sugar,
+                                                            orange zest,
+                                                            vanilla extract,
+                                                            large eggs,
+                                                            buttermilk,
+                                                            orange juice,
+                                                            fresh cranberries,
+                                                            creme cheese,
+                                                            powdered sugar,
+                                                            orange zest,
+                                                            orange juice
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Second Section - Monthly-->
+
+                        <br>
+
+                        <!--Start of Third Section - Limited-->
+                        <h4 id="list-item-3" class="cupcakeheader">Limited Time Cakes</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <img src="media/pumpkinspice.jpg" class="card-img-top" alt="pumpkin spice cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pumpkin Spice</h5>
+                                        <p class="card-text">Moist pumpkin cake iced with pumpkin spice buttercream frosting.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.65</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Limited">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Limited" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Pumpkin Spice Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            baking powder,
+                                                            salt,
+                                                            pumpkin pie spice,
+                                                            light brown sugar,
+                                                            granulated sugar,
+                                                            vegetable oil,
+                                                            large eggs,
+                                                            vanilla extract,
+                                                            pumpkin puree,
+                                                            sour cream,
+                                                            unsalted butter,
+                                                            powdered sugar,
+                                                            vanilla extract,
+                                                            heavy cream
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <img src="media/blackforest.jpg" class="card-img-top" alt="black forest cake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Black Forest</h5>
+                                        <p class="card-text">Moist chocolate cake with cherry filling, whipped cream frosting, chocolate ganache, chocolate flakes, and maraschino cherries.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$45.65</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Limited">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Limited" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Black Forest Cake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>all-purpose flour,
+                                                            granulated sugar,
+                                                            dark cocoa powder,
+                                                            baking soda,
+                                                            baking powder,
+                                                            salt,
+                                                            eggs,
+                                                            milk,
+                                                            vegetable oil,
+                                                            vanilla extract,
+                                                            boiling water,
+                                                            espresso powder,
+                                                            frozen sweet cherries,
+                                                            water,
+                                                            lemon juice,
+                                                            cornstarch
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Third Section - Limited--> 
+
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <!--End of Cake Section-->
 
             <!--Start of Footer-->
             <div class="row full">
                 <div class="col-lg-6">
                     <h3 class="navbar">Sign up for emails.</h3>
-                    <forms>
+                    <form>
                         <input class="inputType" type="text" id="email" name="email" placeholder="Your email">
                         <input class="buttoninput" type="submit" value="Sign up">
-                    </forms>
+                    </form>
                 </div>
                 <div class="col-lg-6 right">
                     <h3 class="para">Have to contact us?</h3>
-                    <button type="button" class="btn btn-light buttoninput style">
-                        <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.
-                    </button>
+                    <div>
+                        <a class="btnn" target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.</a>
+                    </div>
                 </div>
             </div>
             <!--End of Footer-->
         </div>
         <!--End of Container-->
+        <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

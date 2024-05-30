@@ -14,38 +14,53 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!--Font Style-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lato&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="josefin-sans">
         <!--Start of Container-->
         <div class="container-fluid">
             <!--Start of First Row-->
             <div class="row">
                 <div class="col-lg-12">
                     <!--Start of Navbar-->
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">Bakery</a>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="media/SDLogo.png" alt="Bootstrap" width="50" height="50">
+                            </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cupcakes.html">Cupcakes</a>
+                                        <a class="nav-link one" href="cupcakes.html">Cupcakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cookies.html">Cookies</a>
+                                        <a class="nav-link two" href="cookies.html">Cookies</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cakes.html">Cakes</a>
+                                        <a class="nav-link three" href="cakes.html">Cakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="aboutus.html">About Us</a>
+                                        <a class="nav-link four" href="aboutus.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link five" href="faq.html">FAQ</a>
                                     </li>
                                 </ul>
                             </div>
+                            <!--BAG ICON-->
+                            <a class="icon-link icon-link-hover bagg" href="cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                            </a>  
                         </div>
                     </nav>
                     <!--End of Navbar-->
@@ -53,12 +68,22 @@
             </div>
             <!--End of First Row-->
 
+            <br>
+            
+            <div class="row">
+                <div class="col-lg-12" id="logorow">
+                    <img id="logo" src="media/SweetDelightsLogo.png" alt="cupcake line">
+                </div>
+            </div>
+            <br>
+
             <div class="row">
                 <div class="col-lg-12">
                     <img class="imghead" src="media/header.jpg" alt="cupcake line">
                 </div>
             </div>
 
+            <br>
             <!--Start of Carousel Row-->
             <div class="row">
                 <div class="col-lg-12">
@@ -73,7 +98,9 @@
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-lg-8">
-                                        <h1 class="cdtitle">NEW flavor of the month!</h1>
+                                        <div class="hello">
+                                            <h1 class="cdtitle">New flavor of the month!</h1>
+                                        </div>
                                         <h2 class="type">Cookie dough cupcake</h2>
                                         <h3 class="type1">Our new cookie dough cupcake is a vanilla cake with cookie dough flavor icing and bits of cookie dough on top. This is a special edition month flavor that won't be here for long!</h3>
                                     </div>
@@ -82,10 +109,13 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-lg-8">
-                                        <h1 class="cdtitle">Birthday box</h1>
+                                        <div class="hello">
+                                            <h1 class="cdtitle">Birthday box</h1>
+                                        </div>
                                         <h3 class="type1">Get someone you know a birthday box! You can get a variety of options like 4 cupcakes or a cake along with a handwritten letter and candles!</h3>
                                     </div>
                                     <div class="col-lg-4">
@@ -93,20 +123,19 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-lg-8">
-                                        <h1 class="cdtitle">Join the rewards program!</h1>
-                                        <h2 class="type">Get 15% your first purchase when you are signed up for the news letter.</h2                                        <form>
-                                        <form class="form">
-                                          <label class="input" for="name">Name:</label><br>
-                                          <input class="inputType" type="text" id="name" name="name" placeholder="Your name:"><br>
-                                          <label class="input" for="email">Email:</label><br>
-                                          <input class="inputType" type="text" id="email" name="email" placeholder="Your email:"><br><br><br>  
-                                          
-                                          
-                                          <input class="buttoninput" type="submit" value="Click here to redeem your 15% off!">
-                                        </form>    
+                                    <div class="col-lg-8"> 
+                                        <h1 class="cdtitle program">Join the rewards program!</h1>
+                                        <h2 class="type">Get 15% your first purchase when you are signed up for the news letter.</h2>                                   
+                                        <form class="form" onsubmit="return false;">
+                                            <label class="input" for="name">Name:</label><br>
+                                            <input class="inputType" type="text" id="name" name="name" placeholder="Your name:" value=""><br>
+                                            <label class="input" for="email">Email:</label><br>
+                                            <input class="inputType" type="text" id="email" name="email" placeholder="Your email:" value=""><br><br>
+                                            <input type="submit" value="Click here to redeem your 15% off!" id="toastbtn">
+                                        </form>
                                     </div>
                                     <div class="col-lg-4">
                                         <img class="images" src="media/email.webp" alt="email" width="430" height="500">
@@ -128,6 +157,7 @@
             </div>
             <!--End of Carousel Row-->
 
+            <br>
             <!--Start of Cards Row-->
             <div class="row">
                 <div class="col-lg-4">
@@ -136,7 +166,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Cakes</h5>
                             <p class="card-text">Our speciality cakes are moist and delicious, try them out! Click the button below to be redirected to the cakes page.</p>
-                            <a href="cakes.html" class="btn btn-gray">Head over to CAKES!</a>
+                            <a href="cakes.html" class="btn btn-gray cardbutton">Head over to CAKES!</a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +177,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Cupcakes</h5>
                             <p class="card-text">Our cupcakes are a mini version of our cakes. With many flavors to choose from! Click the button below to be redirected to the cupcakes page.</p>
-                            <a href="cupcakes.html" class="btn btn-gray">Head over to CUPCAKES!</a>
+                            <a href="cupcakes.html" class="btn btn-gray cardbutton">Head over to CUPCAKES!</a>
                         </div>
                     </div>
                 </div>
@@ -158,14 +188,14 @@
                         <div class="card-body">
                             <h5 class="card-title">Cookies</h5>
                             <p class="card-text">Our cookies have a nice crust on the outside and a gooey center that could be filled with a surprise! Click the button below to be redirected to the cookies page.</p>
-                            <a href="cookies.html" class="btn btn-gray">Head over to COOKIES!</a>
+                            <a href="cookies.html" class="btn btn-gray cardbutton">Head over to COOKIES!</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!--End of Cards Row-->
 
-
+            <br>
             <div class="row">
                 <div class="col-lg-3">
                     <img src="media/yellowCake.jpg" alt="Yellow Cake" width="300" height="300">
@@ -181,25 +211,45 @@
                 </div>
             </div>
 
+            <br>
+
+            <!--Start of Toast-->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="media/SDLogo.png" class="rounded me-2" alt="..." width="50" height="50">
+                        <strong class="me-auto">Sweet Delights</strong>
+                        <small>Thank You!</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Enjoy 15% Off Using This Promocode: Rewards15
+                    </div>
+                </div>
+            </div>
+            <!--End of Toast-->
+            
             <!--Start of Footer-->
             <div class="row full">
                 <div class="col-lg-6">
                     <h3 class="navbar">Sign up for emails.</h3>
                     <forms>
-                        <input class="inputType" type="text" id="email" name="email" placeholder="Your email">
+                        <input class="inputType" type="text"  name="email" placeholder="Your email">
                         <input class="buttoninput" type="submit" value="Sign up">
                     </forms>
+                   
                 </div>
                 <div class="col-lg-6 right">
                     <h3 class="para">Have to contact us?</h3>
-                    <button type="button" class="btn btn-light buttoninput style">
-                        <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.
-                    </button>
+                    <div>
+                        <a class="btnn" target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.</a>
+                    </div>
                 </div>
             </div>
             <!--End of Footer-->
         </div>
         <!--End of Container-->
+        <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

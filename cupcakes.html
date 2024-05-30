@@ -14,464 +14,545 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
         <!--Font Style-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Acme&family=Lato&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="josefin-sans">
         <!--Start of Container-->
         <div class="container-fluid">
             <!--Start of First Row-->
             <div class="row">
                 <div class="col-lg-12">
                     <!--Start of Navbar-->
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">Bakery</a>
+                            <a class="navbar-brand" href="index.html">
+                                <img src="media/SDLogo.png" alt="Bootstrap" width="50" height="50">
+                            </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="cupcakes.html">Cupcakes</a>
+                                        <a class="nav-link one active" href="cupcakes.html">Cupcakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cookies.html">Cookies</a>
+                                        <a class="nav-link two" href="cookies.html">Cookies</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="cakes.html">Cakes</a>
+                                        <a class="nav-link three" href="cakes.html">Cakes</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="aboutus.html">About Us</a>
+                                        <a class="nav-link four" href="aboutus.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link five" href="faq.html">FAQ</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        <!--BAG ICON-->
+                        <a class="icon-link icon-link-hover bagg" href="cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                            </svg>
+                            <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+                        </a>  
                     </nav>
                     <!--End of Navbar-->
                 </div>
             </div>
             <!--End of First Row-->
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 id="header">Cupcakes!</h1>
-                </div>
-            </div>
+            <br>
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Top 3 Best-Selling Cupcakes!</h1>
+                    <h1 id="header">Cupcakes</h1>
                 </div>
             </div>
+            
+            <br>
 
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cupcake 1</h5>
-                            <p class="card-text">Description of this cupcake goes here</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cost goes here</li>
-                        </ul>
-                        <div class="card-body">
-                            <!--Start of Pop Up-->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake1">
-                                Ingredients
-                            </button>
-                            <!--End of Pop up-->
-                            <a href="#" class="btn btn-gray">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cupcake 2</h5>
-                            <p class="card-text">Description of this cupcake goes here</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cost goes here</li>
-                        </ul>
-                        <div class="card-body">
-                            <!--Start of Pop Up-->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake2">
-                                Ingredients
-                            </button>
-
-                            <!--End of Pop up-->
-                            <a href="#" class="btn btn-gray">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cupcake 3</h5>
-                            <p class="card-text">Description of this cupcake goes here</p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cost goes here</li>
-                        </ul>
-                        <div class="card-body">
-                            <!--Start of Pop Up-->
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake3">
-                                Ingredients
-                            </button>
-
-                            <!--End of Pop up-->
-                            <a href="#" class="btn btn-gray">ORDER NOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <!--Start of Header Row-->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>All Available Cupcakes!</h1>
+                    <img class="imghead" src="media/header.jpg" alt="cupcake line">
                 </div>
             </div>
+            <!--End of Header Row-->
 
+            <br>
+
+            <!--Start of Cupcake Section-->
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 1</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake1">
-                                    Ingredients
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake1</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-2">
+                  <div id="list-example" class="list-group">
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-1">Top 3 Best Cupcakes</a>
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-2">Monthly Cupcakes</a>
+                    <a class="list-group-item list-group-item-action scrollspylist" href="#list-item-3">Limited Time Cupcakes</a>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 2</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake2">
-                                    Ingredients
-                                </button>
 
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake2</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="col-lg-10">
+                    <div style="overflow-y: scroll; overflow-x:hidden; height:600px;" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        
+                        <!--Start of First Section - Top Three-->
+                        <h4 id="list-item-1" class="cupcakeheader">Top 3 Best Cupcakes</h4>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/oreo.jpeg" class="card-img-top" alt="oreo cupcake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Oreo</h5>
+                                        <p class="card-text">A rich chocolate cupcake with vanilla cookies and cream flavor topped with a mini oreo.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$3.25</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel" >Ingredients for Oreo Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>chocolate chips, dark cocoa powder,
+                                                              boiling water,
+                                                              all-purpose flour,
+                                                              granulated sugar,
+                                                              baking soda,
+                                                              salt,
+                                                              vegetable oil,
+                                                              eggs,
+                                                              vanilla extract,
+                                                              oreo
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW!</a>
                                     </div>
                                 </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 3</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake3">
-                                    Ingredients
-                                </button>
 
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake3</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/rasp.jpg" class="card-img-top" alt="raspberry">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chocolate Raspberry</h5>
+                                        <p class="card-text">Chocolate cupcake frosted with a soft raspberry buttercream topped with a chocolate ganache and raspberry.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$3.50</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Chocolate Raspberry Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                             semisweet chocolate chips,
+                                                             semisweet chocolate chips,
+                                                              dark cocoa powder,
+                                                               water,
+                                                              all-purpose flour,
+                                                              granulated sugar,
+                                                              baking soda,
+                                                              salt,
+                                                              vegetable oil,
+                                                             eggs,
+                                                              vanilla extract,
+                                                              raspberries,    
+                                                                lemon juice,
+                                                               cornstarch,
+                                                               heavy cream
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
                                     </div>
                                 </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 4</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake4">
-                                    Ingredients
-                                </button>
 
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake4</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/lemoncup.jpg" class="card-img-top" alt="lemon cupcake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lemon Raspberry</h5>
+                                        <p class="card-text">Soft moist raspberry base with a light lemon buttercream topped with a wedge of lemon.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$3.25</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake3Best">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake3Best" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Lemon Raspberry Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            cups all-purpose flour,
+                                                                granulated sugar,
+                                                                baking powder,
+                                                                salt,
+                                                                milk,
+                                                                vegetable oil,
+                                                                egg,
+                                                                lemon,
+                                                             raspberries, 
+                                                             butter,
+                                                             heavy cream,
+                                                             powdered sugar
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
                                     </div>
                                 </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
                             </div>
                         </div>
+                        <!--End of First Section - Top Three-->
+
+                        <br>
+
+                        <!--Start of Second Section - Monthly-->
+                        <h4 id="list-item-2" class="cupcakeheader">Monthly Cupcakes</h4>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/almond.jpg" class="card-img-top" alt="almond">
+                                    <div class="card-body">
+                                        <h5 class="card-title">White Almond</h5>
+                                        <p class="card-text">White moist vanilla and almond cupcake.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$3.00</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for White Almond Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                             all-purpose flour,
+                                                                granulated sugar,
+                                                                baking powder,
+                                                                salt,
+                                                                milk,
+                                                                egg,
+                                                                sour cream,
+                                                                vegetable oil,
+                                                                vanilla extract,
+                                                                almond extract,
+                                                                butter,
+                                                                powered sugar,
+                                                                heavy cream
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/candycup.jpg" class="card-img-top" alt="candy cupake">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Chocolate Candy</h5>
+                                        <p class="card-text">Moist cupcake with a light buttercream topped with crunchy gooey chocolate candy.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$4.00</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+            
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Chocolate Candy Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                             chocolate chips,
+                                                             cocoa powder,
+                                                             water,
+                                                             all-purpose flour,
+                                                             granulated sugar,
+                                                             baking soda,
+                                                             salt,
+                                                             vegetable oil,
+                                                             eggs,
+                                                             vanilla extract, 
+                                                             heavy cream,
+                                                             powdered sugar,
+                                                             peanut butter,
+                                                             caramel bites
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img src="media/cocoa.jpg" class="card-img-top" alt="hot cocoa">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hot Cocoa</h5>
+                                        <p class="card-text">Rich flavored chocolate base cupcake with a soft marshmallow buttercream.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$3.75</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake3Monthly">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake3Monthly" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Hot Cocoa Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                           chocolate chips,
+                                                           cocoa powder,
+                                                           water,
+                                                           all-purpose flour,
+                                                           granulated sugar,
+                                                            baking soda,
+                                                           salt,
+                                                           eggs,
+                                                            vegetable oil,
+                                                            vanilla extract,
+                                                            hot cocoa mixing,
+                                                            heavy cream
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Second Section - Monthly-->
+
+                        <br>
+
+                        <!--Start of Third Section - Limited-->
+                        <h4 id="list-item-3" class="cupcakeheader">Limited Time Cupcakes</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <img src="media/blue.jpg" class="card-img-top" alt="blueberry">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Blueberry</h5>
+                                        <p class="card-text">Light vanilla and blueberry cupcake base with a vibrant blueberry buttercream.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$4.00</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake1Limited">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake1Limited" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Blueberry Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                            all-purpose flour,
+                                                            baking powder,
+                                                            salt,
+                                                            granulated sugar,
+                                                            butter,
+                                                            vegetable oil,
+                                                            egg,
+                                                            sour cream,
+                                                            vanilla extract,
+                                                            milk,
+                                                            blueberries
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <img src="media/apple.jpg" class="card-img-top" alt="apple crisp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Apple Crisp</h5>
+                                        <p class="card-text">A moist cinnamon cupcake with cinnamon buttercream and apple filling.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">$4.00</li>
+                                    </ul>
+                                    <div class="card-body">
+                                        <!--Start of Pop Up-->
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-custom ingredients" title="Preview Ingredients" data-bs-toggle="modal" data-bs-target="#Cupcake2Limited">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                                                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                            </svg>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="Cupcake2Limited" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5 staticBackdropLabel">Ingredients for Apple Crisp Cupcake</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                           all-purpose flour,
+                                                           baking powder,
+                                                           cinnamon,
+                                                           salt,
+                                                           granulated sugar,
+                                                           butter,
+                                                           vegetable oil,
+                                                           egg,
+                                                           sour cream,
+                                                           vanilla extract,
+                                                           milk,
+                                                           heavy cream,
+                                                           powdered sugar
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of Pop up-->
+                                        <a href="cart.html" class="btn btn-gray orderbutton">ORDER NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Third Section - Limited-->
+                        
+                        <br>
+
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 5</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake5">
-                                    Ingredients
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake5</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 6</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake6">
-                                    Ingredients
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake6</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 7</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake7">
-                                    Ingredients
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake7</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="col-lg-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="media/cupcakeplaceholder.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Cupcake 8</h5>
-                                <p class="card-text">Description of this cupcake goes here</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cost goes here</li>
-                            </ul>
-                            <div class="card-body">
-                                <!--Start of Pop Up-->
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Cupcake8">
-                                    Ingredients
-                                </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="Cupcake8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Ingredients for Cupcake8</h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Ingredients go here</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End of Pop up-->
-                                <a href="#" class="btn btn-gray">ORDER NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--End of Cupcake Section-->
 
             <!--Start of Footer-->
             <div class="row full">
@@ -484,14 +565,15 @@
                 </div>
                 <div class="col-lg-6 right">
                     <h3 class="para">Have to contact us?</h3>
-                    <button type="button" class="btn btn-light buttoninput style">
-                        <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.
-                    </button>
+                    <div>
+                        <a class="btnn" target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Click here.</a>
+                    </div>
                 </div>
             </div>
             <!--End of Footer-->
         </div>
         <!--End of Container-->
+        <script src="main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
