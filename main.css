@@ -436,3 +436,12 @@ nav{
         opacity:1;
     }
 }
+
+.thankyou{
+    font-size: 100px;
+}
+
+.thankyounote{
+    font-size: 50px;
+    text-align: center;
+}
