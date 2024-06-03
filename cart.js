@@ -675,4 +675,29 @@ function cakeeightSubmit(){
   }
 }
 
+//Order Now
+document.getElementById("orderButton").onclick = function() {
+  RegValidation()
+  
+  function RegValidation() {              
+    var fname = document.getElementById("fname").value
+    var lname = document.getElementById("lname").value
+    var addy = document.getElementById("addy").value
+    if (!fname) {
+      alert("First name must be filled out")
+      
+    }
+    else if(!lname){
+      alert("Last name must be filled out")
+    }
+    else if(!addy){
+      alert("Address must be filled out")
+    }
+    else{
+      window.location.href = "thankyou.html"
+    }
+    return true;
+  }
+}
+
 //End of checkout for cart.html
