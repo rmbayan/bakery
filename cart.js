@@ -28,35 +28,41 @@ var cart = {
   cakesix: 0,
   cakeseven: 0,
   cakeeight: 0,
+
+  Rewards15: "true",
 }
 
 /// Local Storage Object
-var cupcakeoneSave = localStorage.getItem("cupcakeone");
-var cupcaketwoSave = localStorage.getItem("cupcaketwo");
-var cupcakethreeSave = localStorage.getItem("cupcakethree");
-var cupcakefourSave = localStorage.getItem("cupcakefour");
-var cupcakefiveSave = localStorage.getItem("cupcakefive");
-var cupcakesixSave = localStorage.getItem("cupcakesix");
-var cupcakesevenSave = localStorage.getItem("cupcakeseven");
-var cupcakeeightSave = localStorage.getItem("cupcakeeight");
+var cupcakeoneSave = localStorage.getItem("cupcakeone")
+var cupcaketwoSave = localStorage.getItem("cupcaketwo")
+var cupcakethreeSave = localStorage.getItem("cupcakethree")
+var cupcakefourSave = localStorage.getItem("cupcakefour")
+var cupcakefiveSave = localStorage.getItem("cupcakefive")
+var cupcakesixSave = localStorage.getItem("cupcakesix")
+var cupcakesevenSave = localStorage.getItem("cupcakeseven")
+var cupcakeeightSave = localStorage.getItem("cupcakeeight")
 
-var cookieoneSave = localStorage.getItem("cookieone");
-var cookietwoSave = localStorage.getItem("cookietwo");
-var cookiethreeSave = localStorage.getItem("cookiethree");
-var cookiefourSave = localStorage.getItem("cookiefour");
-var cookiefiveSave = localStorage.getItem("cookiefive");
-var cookiesixSave = localStorage.getItem("cookiesix");
-var cookiesevenSave = localStorage.getItem("cookieseven");
-var cookieeightSave = localStorage.getItem("cookieeight");
+var cookieoneSave = localStorage.getItem("cookieone")
+var cookietwoSave = localStorage.getItem("cookietwo")
+var cookiethreeSave = localStorage.getItem("cookiethree")
+var cookiefourSave = localStorage.getItem("cookiefour")
+var cookiefiveSave = localStorage.getItem("cookiefive")
+var cookiesixSave = localStorage.getItem("cookiesix")
+var cookiesevenSave = localStorage.getItem("cookieseven")
+var cookieeightSave = localStorage.getItem("cookieeight")
 
-var cakeoneSave = localStorage.getItem("cakeone");
-var caketwoSave = localStorage.getItem("caketwo");
-var cakethreeSave = localStorage.getItem("cakethree");
-var cakefourSave = localStorage.getItem("cakefour");
-var cakefiveSave = localStorage.getItem("cakefive");
-var cakesixSave = localStorage.getItem("cakesix");
-var cakesevenSave = localStorage.getItem("cakeseven");
-var cakeeightSave = localStorage.getItem("cakeeight");
+var cakeoneSave = localStorage.getItem("cakeone")
+var caketwoSave = localStorage.getItem("caketwo")
+var cakethreeSave = localStorage.getItem("cakethree")
+var cakefourSave = localStorage.getItem("cakefour")
+var cakefiveSave = localStorage.getItem("cakefive")
+var cakesixSave = localStorage.getItem("cakesix")
+var cakesevenSave = localStorage.getItem("cakeseven")
+var cakeeightSave = localStorage.getItem("cakeeight")
+
+var Rewards15Save = localStorage.getItem("Rewards15") || "true"
+
+var allcostSave = localStorage.getItem("allcost") || 0
 
 // Overall Purchase Saves Cart
 document.getElementById("cupcakeoneamount").innerHTML = cupcakeoneSave || 0
@@ -111,6 +117,8 @@ document.getElementById("cakeeightamount").innerHTML = cakeeightSave || 0
 document.getElementById("cakeeightcost").innerHTML = (cakeeightSave * 45.65)
 
 //Functions
+allCost()
+
 function receipt(){
   let button = document.getElementById("receiptButton")
   button.disabled = true
@@ -265,12 +273,16 @@ function receipt(){
     p.innerHTML = cakeeightSave + " Black Forest for $" + (cakeeightSave * 45.65)
     div.append(p);
   }
+
+  let taxh = document.createElement("h4")
+  taxh.innerHTML = "Tax: $5"
+  div.append(taxh)
 }
 
 function cupcakeoneSubmit(){
   let newValue = document.getElementById("cupcakeone").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakeoneamount")
@@ -281,13 +293,14 @@ function cupcakeoneSubmit(){
     var cupcakeone = cart.cupcakeone
     cupcakeone = newValue
     localStorage.setItem("cupcakeone", cupcakeone)
+    allCost()
   }
 }
 
 function cupcaketwoSubmit(){
   let newValue = document.getElementById("cupcaketwo").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcaketwoamount")
@@ -298,13 +311,14 @@ function cupcaketwoSubmit(){
     var cupcaketwo = cart.cupcaketwo
     cupcaketwo = newValue
     localStorage.setItem("cupcaketwo", cupcaketwo)
+    allCost()
   }
 }
 
 function cupcakethreeSubmit(){
   let newValue = document.getElementById("cupcakethree").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakethreeamount")
@@ -315,13 +329,14 @@ function cupcakethreeSubmit(){
     var cupcakethree = cart.cupcakethree
     cupcakethree = newValue
     localStorage.setItem("cupcakethree", cupcakethree)
+    allCost()
   }
 }
 
 function cupcakefourSubmit(){
   let newValue = document.getElementById("cupcakefour").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakefouramount")
@@ -332,13 +347,14 @@ function cupcakefourSubmit(){
     var cupcakefour = cart.cupcakefour
     cupcakefour = newValue
     localStorage.setItem("cupcakefour", cupcakefour)
+    allCost()
   }
 }
 
 function cupcakefiveSubmit(){
   let newValue = document.getElementById("cupcakefive").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakefiveamount")
@@ -349,13 +365,14 @@ function cupcakefiveSubmit(){
     var cupcakefive = cart.cupcakefive
     cupcakefive = newValue
     localStorage.setItem("cupcakefive", cupcakefive)
+    allCost()
   }
 }
 
 function cupcakesixSubmit(){
   let newValue = document.getElementById("cupcakesix").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakesixamount")
@@ -366,13 +383,14 @@ function cupcakesixSubmit(){
     var cupcakesix = cart.cupcakesix
     cupcakesix = newValue
     localStorage.setItem("cupcakesix", cupcakesix)
+    allCost()
   }
 }
 
 function cupcakesevenSubmit(){
   let newValue = document.getElementById("cupcakeseven").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakesevenamount")
@@ -383,13 +401,14 @@ function cupcakesevenSubmit(){
     var cupcakeseven = cart.cupcakeseven
     cupcakeseven = newValue
     localStorage.setItem("cupcakeseven", cupcakeseven)
+    allCost()
   }
 }
 
 function cupcakeeightSubmit(){
   let newValue = document.getElementById("cupcakeeight").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cupcakeeightamount")
@@ -400,13 +419,14 @@ function cupcakeeightSubmit(){
     var cupcakeeight = cart.cupcakeeight
     cupcakeeight = newValue
     localStorage.setItem("cupcakeeight", cupcakeeight)
+    allCost()
   }
 }
 
 function cookieoneSubmit(){
   let newValue = document.getElementById("cookieone").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookieoneamount")
@@ -417,13 +437,14 @@ function cookieoneSubmit(){
     var cookieone = cart.cookieone
     cookieone = newValue
     localStorage.setItem("cookieone", cookieone)
+    allCost()
   }
 }
 
 function cookietwoSubmit(){
   let newValue = document.getElementById("cookietwo").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookietwoamount")
@@ -434,13 +455,14 @@ function cookietwoSubmit(){
     var cookietwo = cart.cookietwo
     cookietwo = newValue
     localStorage.setItem("cookietwo", cookietwo)
+    allCost()
   }
 }
 
 function cookiethreeSubmit(){
   let newValue = document.getElementById("cookiethree").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookiethreeamount")
@@ -451,13 +473,14 @@ function cookiethreeSubmit(){
     var cookiethree = cart.cookiethree
     cookiethree = newValue
     localStorage.setItem("cookiethree", cookiethree)
+    allCost()
   }
 }
 
 function cookiefourSubmit(){
   let newValue = document.getElementById("cookiefour").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookiefouramount")
@@ -468,13 +491,14 @@ function cookiefourSubmit(){
     var cookiefour = cart.cookiefour
     cookiefour = newValue
     localStorage.setItem("cookiefour", cookiefour)
+    allCost()
   }
 }
 
 function cookiefiveSubmit(){
   let newValue = document.getElementById("cookiefive").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookiefiveamount")
@@ -485,13 +509,14 @@ function cookiefiveSubmit(){
     var cookiefive = cart.cookiefive
     cookiefive = newValue
     localStorage.setItem("cookiefive", cookiefive)
+    allCost()
   }
 }
 
 function cookiesixSubmit(){
   let newValue = document.getElementById("cookiesix").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookiesixamount")
@@ -502,13 +527,14 @@ function cookiesixSubmit(){
     var cookiesix = cart.cookiesix
     cookiesix = newValue
     localStorage.setItem("cookiesix", cookiesix)
+    allCost()
   }
 }
 
 function cookiesevenSubmit(){
   let newValue = document.getElementById("cookieseven").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookiesevenamount")
@@ -519,13 +545,14 @@ function cookiesevenSubmit(){
     var cookieseven = cart.cookieseven
     cookieseven = newValue
     localStorage.setItem("cookieseven", cookieseven)
+    allCost()
   }
 }
 
 function cookieeightSubmit(){
   let newValue = document.getElementById("cookieeight").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cookieeightamount")
@@ -536,13 +563,14 @@ function cookieeightSubmit(){
     var cookieeight = cart.cookieeight
     cookieeight = newValue
     localStorage.setItem("cookieeight", cookieeight)
+    allCost()
   }
 }
 
 function cakeoneSubmit(){
   let newValue = document.getElementById("cakeone").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakeoneamount")
@@ -553,13 +581,14 @@ function cakeoneSubmit(){
     var cakeone = cart.cakeone
     cakeone = newValue
     localStorage.setItem("cakeone", cakeone)
+    allCost()
   }
 }
 
 function caketwoSubmit(){
   let newValue = document.getElementById("caketwo").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("caketwoamount")
@@ -570,13 +599,14 @@ function caketwoSubmit(){
     var caketwo = cart.caketwo
     caketwo = newValue
     localStorage.setItem("caketwo", caketwo)
+    allCost()
   }
 }
 
 function cakethreeSubmit(){
   let newValue = document.getElementById("cakethree").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakethreeamount")
@@ -587,13 +617,14 @@ function cakethreeSubmit(){
     var cakethree = cart.cakethree
     cakethree = newValue
     localStorage.setItem("cakethree", cakethree)
+    allCost()
   }
 }
 
 function cakefourSubmit(){
   let newValue = document.getElementById("cakefour").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakefouramount")
@@ -604,13 +635,14 @@ function cakefourSubmit(){
     var cakefour = cart.cakefour
     cakefour = newValue
     localStorage.setItem("cakefour", cakefour)
+    allCost()
   }
 }
 
 function cakefiveSubmit(){
   let newValue = document.getElementById("cakefive").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakefiveamount")
@@ -621,13 +653,14 @@ function cakefiveSubmit(){
     var cakefive = cart.cakefive
     cakefive = newValue
     localStorage.setItem("cakefive", cakefive)
+    allCost()
   }
 }
 
 function cakesixSubmit(){
   let newValue = document.getElementById("cakesix").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakesixamount")
@@ -638,13 +671,14 @@ function cakesixSubmit(){
     var cakesix = cart.cakesix
     cakesix = newValue
     localStorage.setItem("cakesix", cakesix)
+    allCost()
   }
 }
 
 function cakesevenSubmit(){
   let newValue = document.getElementById("cakeseven").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakesevenamount")
@@ -655,13 +689,14 @@ function cakesevenSubmit(){
     var cakeseven = cart.cakeseven
     cakeseven = newValue
     localStorage.setItem("cakeseven", cakeseven)
+    allCost()
   }
 }
 
 function cakeeightSubmit(){
   let newValue = document.getElementById("cakeeight").value
   if(newValue < 0){
-    alert("Number must be greater than 0.")
+    errorZero()
   }
   else{
     let newAmount = document.getElementById("cakeeightamount")
@@ -672,28 +707,131 @@ function cakeeightSubmit(){
     var cakeeight = cart.cakeeight
     cakeeight = newValue
     localStorage.setItem("cakeeight", cakeeight)
+    allCost()
+  }
+}
+
+//Greater than 0
+function errorZero(){
+  let myAlert = document.getElementById('greaterZero');
+  let bsAlert = new bootstrap.Toast(myAlert);
+  bsAlert.show();
+}
+
+// All Cost
+function allCost(){
+  let showcost = document.getElementById("showcost")
+
+  let cupcakeonecost = document.getElementById("cupcakeonecost")
+  let cupcaketwocost = document.getElementById("cupcaketwocost")
+  let cupcakethreecost = document.getElementById("cupcakethreecost")
+  let cupcakefourcost = document.getElementById("cupcakefourcost")
+  let cupcakefivecost = document.getElementById("cupcakefivecost")
+  let cupcakesixcost = document.getElementById("cupcakesixcost")
+  let cupcakesevencost = document.getElementById("cupcakesevencost")
+  let cupcakeeightcost = document.getElementById("cupcakeeightcost")
+  let totalcupcakecost = parseFloat(cupcakeonecost.innerHTML) + parseFloat(cupcaketwocost.innerHTML) + parseFloat(cupcakethreecost.innerHTML) + parseFloat(cupcakefourcost.innerHTML) + parseFloat(cupcakefivecost.innerHTML) + parseFloat(cupcakesixcost.innerHTML) + parseFloat(cupcakesevencost.innerHTML) + parseFloat(cupcakeeightcost.innerHTML)
+
+  let cookieonecost = document.getElementById("cookieonecost")
+  let cookietwocost = document.getElementById("cookietwocost")
+  let cookiethreecost = document.getElementById("cookiethreecost")
+  let cookiefourcost = document.getElementById("cookiefourcost")
+  let cookiefivecost = document.getElementById("cookiefivecost")
+  let cookiesixcost = document.getElementById("cookiesixcost")
+  let cookiesevencost = document.getElementById("cookiesevencost")
+  let cookieeightcost = document.getElementById("cookieeightcost")
+  let totalcookiecost = parseFloat(cookieonecost.innerHTML) + parseFloat(cookietwocost.innerHTML) + parseFloat(cookiethreecost.innerHTML) + parseFloat(cookiefourcost.innerHTML) + parseFloat(cookiefivecost.innerHTML) + parseFloat(cookiesixcost.innerHTML) + parseFloat(cookiesevencost.innerHTML) + parseFloat(cookieeightcost.innerHTML)
+
+  let cakeonecost = document.getElementById("cakeonecost")
+  let caketwocost = document.getElementById("caketwocost")
+  let cakethreecost = document.getElementById("cakethreecost")
+  let cakefourcost = document.getElementById("cakefourcost")
+  let cakefivecost = document.getElementById("cakefivecost")
+  let cakesixcost = document.getElementById("cakesixcost")
+  let cakesevencost = document.getElementById("cakesevencost")
+  let cakeeightcost = document.getElementById("cakeeightcost")
+  let totalcakecost = parseFloat(cakeonecost.innerHTML) + parseFloat(caketwocost.innerHTML) + parseFloat(cakethreecost.innerHTML) + parseFloat(cakefourcost.innerHTML) + parseFloat(cakefivecost.innerHTML) + parseFloat(cakesixcost.innerHTML) + parseFloat(cakesevencost.innerHTML) + parseFloat(cakeeightcost.innerHTML)
+
+  let allcost = totalcupcakecost + totalcookiecost + totalcakecost
+
+  if (Rewards15Save == "used"){
+    allcost = allcost - (allcost * 0.15)
+    let promocodecost = allcost
+    allcost = promocodecost.toFixed(2)
+  }
+
+  showcost.innerHTML = allcost
+  localStorage.setItem("allcost", allcost)
+}
+
+//Promocode
+function promocodeSubmit(){
+  var promocode = document.getElementById("code").value
+  var used = "used"
+
+  if (promocode == "Rewards15"){
+    if (Rewards15Save == "true"){
+      let myAlert = document.getElementById('redeemSuccess');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
+      localStorage.setItem("Rewards15", used)
+      location.reload()
+    }
+    else{
+      let myAlert = document.getElementById('redeemFail');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
+    }
+  }
+
+  else{
+    let myAlert = document.getElementById('redeemInvalid');
+    let bsAlert = new bootstrap.Toast(myAlert);
+    bsAlert.show();
   }
 }
 
 //Order Now
 document.getElementById("orderButton").onclick = function() {
-  RegValidation()
+  checkInput()
   
-  function RegValidation() {              
+  function checkInput() {              
     var fname = document.getElementById("fname").value
     var lname = document.getElementById("lname").value
+    var card = document.getElementById("card").value
     var addy = document.getElementById("addy").value
+    var state = document.getElementById("state").value
+
     if (!fname) {
-      alert("First name must be filled out")
-      
+      let myAlert = document.getElementById('firstName');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
     }
     else if(!lname){
-      alert("Last name must be filled out")
+      let myAlert = document.getElementById('lastName');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
+    }
+    else if(!card){
+      let myAlert = document.getElementById('cardError');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
     }
     else if(!addy){
-      alert("Address must be filled out")
+      let myAlert = document.getElementById('addressError');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
+    }
+    else if(!state){
+      let myAlert = document.getElementById('stateError');
+      let bsAlert = new bootstrap.Toast(myAlert);
+      bsAlert.show();
     }
     else{
+      let done = "done"
+      if (Rewards15Save == "used"){
+        localStorage.setItem("Rewards15", done)
+      }
       window.location.href = "thankyou.html"
     }
     return true;
